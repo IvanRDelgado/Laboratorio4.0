@@ -129,6 +129,7 @@ public class MasterFormlario extends javax.swing.JFrame {
         JFrame a = new MasterFormlario();
 
         a.setVisible(true);
+        
 
     }
 

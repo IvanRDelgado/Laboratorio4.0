@@ -17,6 +17,7 @@ public abstract class Persona {
     String mail;
     String address;
     
+    
     public Persona(String name, String lastName, int landLine, int movilPhone, String mail, String address) {
         this.name = name;
         this.lastName = lastName;

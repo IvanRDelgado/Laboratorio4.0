@@ -53,7 +53,7 @@ public class FormularioMateria extends javax.swing.JFrame {
 
         jLabel8.setText("Profesor : ");
 
-        jLabel9.setText("Codigo : ");
+        jLabel9.setText("Email : ");
 
         jTextField7.setEditable(false);
         jTextField7.setBackground(new java.awt.Color(153, 153, 255));

@@ -330,7 +330,7 @@ public class FormularioEstudiante extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "..." }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -451,6 +451,7 @@ public class FormularioEstudiante extends javax.swing.JFrame {
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
@@ -485,7 +486,10 @@ public class FormularioEstudiante extends javax.swing.JFrame {
         materiasVistas.add(0, materias.get(jComboBox2.getSelectedIndex()));
         materiasVistas.add(1, materias.get(jComboBox3.getSelectedIndex()));
         materiasVistas.add(2, materias.get(jComboBox4.getSelectedIndex()));
-        estudiantes.add(new Estudiante(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()), Integer.parseInt(jTextField4.getText()), jTextField5.getText(), jTextField6.getText(),materiasVistas));
+        Estudiante E = new Estudiante(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()), Integer.parseInt(jTextField4.getText()), jTextField5.getText(), jTextField6.getText(),materiasVistas);
+        estudiantes.add(E);
+        jComboBox1.addItem(E.getName()+" "+E.getLastName());
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed

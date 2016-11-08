@@ -31,11 +31,10 @@ public class MasterFormlario extends javax.swing.JFrame {
         estudiantes = new ArrayList<>();
         profesores = new ArrayList<>();
         materias = new ArrayList<>();
-        estudiante = new FormularioEstudiante(this, profesores, estudiantes , materias);
-        profesor = new FormularioProfesor(this, profesores, estudiantes , materias);
-        materia = new FormularioMateria(this, profesores, estudiantes , materias);
-        
-        
+        estudiante = new FormularioEstudiante(this, profesores, estudiantes, materias);
+        profesor = new FormularioProfesor(this, profesores, estudiantes, materias);
+        materia = new FormularioMateria(this, profesores, estudiantes, materias);
+
         initComponents();
 
     }
@@ -136,7 +135,6 @@ public class MasterFormlario extends javax.swing.JFrame {
         JFrame a = new MasterFormlario();
 
         a.setVisible(true);
-        
 
     }
 

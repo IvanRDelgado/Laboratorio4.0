@@ -24,7 +24,6 @@ public class Materia {
     }
     
     
-
     public String getNombre() {
         return Nombre;
     }

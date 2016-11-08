@@ -15,7 +15,4 @@ public class Profesor extends Persona{
         super(name, lastName, landLine, movilPhone, mail, address);
     }
 
-    
-    
-    
 }

@@ -53,7 +53,7 @@ public class FormularioMateria extends javax.swing.JFrame {
 
         jLabel8.setText("Profesor : ");
 
-        jLabel9.setText("Email : ");
+        jLabel9.setText("Codigo : ");
 
         jTextField7.setEditable(false);
         jTextField7.setBackground(new java.awt.Color(153, 153, 255));
@@ -131,7 +131,7 @@ public class FormularioMateria extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Email:");
+        jLabel5.setText("Codigo");
 
         jButton1.setText("Ingresar Materia");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

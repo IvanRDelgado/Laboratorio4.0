@@ -328,6 +328,7 @@ public class FormularioProfesor extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        profesores.add(new Profesor(jTextField13.getText(), jTextField14.getText(), Integer.parseInt(jTextField15.getText()),Integer.parseInt(jTextField16.getText()) , jTextField17.getText(), jTextField18.getText()));
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed

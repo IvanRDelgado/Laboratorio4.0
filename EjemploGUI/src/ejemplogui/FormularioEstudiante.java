@@ -417,12 +417,6 @@ public class FormularioEstudiante extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         estudiantes.add(new Estudiante(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()), Integer.parseInt(jTextField4.getText()), jTextField5.getText(), jTextField6.getText()));
-        jTextField7.setText(A.getName());
-        jTextField8.setText(Integer.toString(A.getLandLine()));
-        jTextField9.setText(A.getMail());
-        jTextField10.setText(A.getLastName());
-        jTextField11.setText(Integer.toString(A.getMovilPhone()));
-        jTextField12.setText(A.getAddress());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed

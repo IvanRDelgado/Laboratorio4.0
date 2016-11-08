@@ -12,11 +12,18 @@ package ejemplogui;
 public class Materia {
     String Nombre;
     String Codigo;
+    String Profesor;
 
-    public Materia(String Nombre, String Codigo) {
+    
+    
+
+    public Materia(String Nombre, String Codigo,String Profesor) {
         this.Nombre = Nombre;
         this.Codigo = Codigo;
+        this.Profesor=Profesor;
     }
+    
+    
 
     public String getNombre() {
         return Nombre;
@@ -24,6 +31,10 @@ public class Materia {
 
     public String getCodigo() {
         return Codigo;
+    }
+    
+    public String getProfesor() {
+        return Profesor;
     }
 
     public void setNombre(String Nombre) {
@@ -33,6 +44,8 @@ public class Materia {
     public void setCodigo(String Codigo) {
         this.Codigo = Codigo;
     }
-    
+    public void setProfesor(String Profesor) {
+        this.Profesor = Profesor;
+    }
    
 }

@@ -26,6 +26,7 @@ public class FormularioEstudiante extends javax.swing.JFrame {
         this.estudiantes = estudiantes;
         this.materias= materias;
         this.profesores=profesores;
+        
     }
 
     /**

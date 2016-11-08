@@ -10,41 +10,41 @@ package ejemplogui;
  * @author Ivan Delgado
  */
 public class Materia {
-    String Nombre;
-    String Codigo;
-    String Profesor;
+    String nombre;
+    int codigo;
+    Profesor profesor;
 
     
     
 
-    public Materia(String Nombre, String Codigo,String Profesor) {
-        this.Nombre = Nombre;
-        this.Codigo = Codigo;
-        this.Profesor=Profesor;
+    public Materia(String nombre, int codigo,Profesor profesor) {
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.profesor=profesor;
     }
     
     
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public String getCodigo() {
-        return Codigo;
+    public int getCodigo() {
+        return codigo;
     }
     
-    public String getProfesor() {
-        return Profesor;
+    public Profesor getProfesor() {
+        return profesor;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setCodigo(String Codigo) {
-        this.Codigo = Codigo;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
-    public void setProfesor(String Profesor) {
-        this.Profesor = Profesor;
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
     }
    
 }

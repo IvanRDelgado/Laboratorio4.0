@@ -133,7 +133,6 @@ public class FormularioProfesor extends javax.swing.JFrame {
             }
         });
 
-        selProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "..." }));
         selProfesor.setToolTipText("");
         selProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -398,7 +397,7 @@ public class FormularioProfesor extends javax.swing.JFrame {
 
     private void selProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selProfesorActionPerformed
         // TODO add your handling code here:
-        Profesor P= profesores.get(selProfesor.getSelectedIndex()-1);
+        Profesor P= profesores.get(selProfesor.getSelectedIndex());
         jTextField19.setText(P.getName());
         jTextField20.setText(Integer.toString(P.getLandLine()));
         jTextField21.setText(P.getMail());

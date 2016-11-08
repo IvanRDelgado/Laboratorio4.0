@@ -19,6 +19,23 @@ public class Estudiante extends Persona{
         super(name, lastName, landLine, movilPhone, mail, address);
         this.materias= materias;
     } 
+
+    public String getMateriasString() {
+        String r="";
+        for (Materia materia : materias) {
+            r+=materia.getNombre();
+        }
+        return r;
+    }
+
+    public ArrayList<Materia> getMaterias() {
+        return materias;
+    }
+
+    public void setMaterias(ArrayList<Materia> materias) {
+        this.materias = materias;
+    }
+    
     
     
 }

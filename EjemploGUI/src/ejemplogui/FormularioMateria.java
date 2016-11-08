@@ -5,18 +5,27 @@
  */
 package ejemplogui;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Estudiante
  */
 public class FormularioMateria extends javax.swing.JFrame {
     MasterFormlario master;
+    ArrayList<Estudiante> estudiantes;
+    ArrayList<Materia> materias;
+    ArrayList<Profesor> profesores;
     /**
      * Creates new form FormularioMateria
      */
-    public FormularioMateria(MasterFormlario master) {
+    public FormularioMateria(MasterFormlario master,ArrayList<Profesor> profesores,ArrayList<Estudiante> estudiantes ,ArrayList<Materia> materias) {
         initComponents();
         this.master=master;
+        this.estudiantes = estudiantes;
+        this.materias= materias;
+        this.profesores=profesores;
+        
     }
 
     /**

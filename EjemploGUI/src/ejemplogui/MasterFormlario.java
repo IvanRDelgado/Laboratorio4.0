@@ -5,6 +5,7 @@
  */
 package ejemplogui;
 
+import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.LookAndFeel;
 import javax.swing.*;
@@ -21,12 +22,18 @@ public class MasterFormlario extends javax.swing.JFrame {
     private FormularioEstudiante estudiante;
     private FormularioMateria materia;
     private FormularioProfesor profesor;
+    ArrayList<Estudiante> estudiantes;
+    ArrayList<Materia> materias;
+    ArrayList<Profesor> profesores;
 
     public MasterFormlario() {
         super("MASTER OF PUPPETS");
-        estudiante = new FormularioEstudiante(this);
-        profesor = new FormularioProfesor(this);
-        materia = new FormularioMateria(this);
+        estudiantes = new ArrayList<>();
+        profesores = new ArrayList<>();
+        materias = new ArrayList<>();
+        estudiante = new FormularioEstudiante(this, profesores, estudiantes , materias);
+        profesor = new FormularioProfesor(this, profesores, estudiantes , materias);
+        materia = new FormularioMateria(this, profesores, estudiantes , materias);
         
         
         initComponents();

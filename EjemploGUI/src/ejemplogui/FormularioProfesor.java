@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class FormularioProfesor extends javax.swing.JFrame {
 
-    private MasterFormlario master;
+    MasterFormlario master;
     ArrayList<Estudiante> estudiantes;
     ArrayList<Materia> materias;
     ArrayList<Profesor> profesores;
@@ -28,7 +28,10 @@ public class FormularioProfesor extends javax.swing.JFrame {
         this.materias= materias;
         this.profesores=profesores;
     }
-
+    public void modificar_formulario_materia (){
+        FormularioMateria A = new FormularioMateria(master, profesores, estudiantes, materias);
+        A.actualizarComboBox();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -355,6 +358,7 @@ public class FormularioProfesor extends javax.swing.JFrame {
         Profesor P = new Profesor(jTextField13.getText(), jTextField14.getText(), Integer.parseInt(jTextField15.getText()),Integer.parseInt(jTextField16.getText()) , jTextField17.getText(), jTextField18.getText());
         profesores.add(P);
         selProfesor.addItem(P.getName()+" "+P.getLastName());
+        modificar_formulario_materia ();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed

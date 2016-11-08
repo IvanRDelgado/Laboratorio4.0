@@ -27,7 +27,13 @@ public class FormularioMateria extends javax.swing.JFrame {
         this.profesores=profesores;
         
     }
-
+    
+    public void actualizarComboBox (){
+        for (Profesor profesor : profesores){
+            jComboBox1.addItem(profesor.getName()+" "+profesor.getLastName());
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -155,6 +161,12 @@ public class FormularioMateria extends javax.swing.JFrame {
         });
 
         jLabel5.setText("Codigo");
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Ingresar Materia");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -285,6 +297,10 @@ public class FormularioMateria extends javax.swing.JFrame {
         jTextField8.setText(m.getProfesor().getName()+" "+m.getProfesor().getLastName());
         jTextField9.setText(Integer.toString(m.getCodigo()));
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -31,7 +31,7 @@ public class MasterFormlario extends javax.swing.JFrame {
         estudiantes = new ArrayList<>();
         profesores = new ArrayList<>();
         materias = new ArrayList<>();
-        materias.add(new Materia(" ", 0l, null));
+        
         estudiante = new FormularioEstudiante(this, profesores, estudiantes, materias);
         profesor = new FormularioProfesor(this, profesores, estudiantes, materias);
         materia = new FormularioMateria(this, profesores, estudiantes, materias);
@@ -123,7 +123,7 @@ public class MasterFormlario extends javax.swing.JFrame {
 
         setVisible(false);
         estudiante.setVisible(true);
-
+        materias.add(new Materia(" ", 0l, new Profesor(" ", " ", 0, 0, " ", " ")));
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 

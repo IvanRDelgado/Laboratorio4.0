@@ -11,13 +11,13 @@ package ejemplogui;
  */
 public class Materia {
     String nombre;
-    int codigo;
+    long codigo;
     Profesor profesor;
 
     
     
 
-    public Materia(String nombre, int codigo,Profesor profesor) {
+    public Materia(String nombre, Long codigo,Profesor profesor) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.profesor=profesor;
@@ -28,7 +28,7 @@ public class Materia {
         return nombre;
     }
 
-    public int getCodigo() {
+    public Long getCodigo() {
         return codigo;
     }
     
@@ -40,7 +40,7 @@ public class Materia {
         this.nombre = nombre;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(Long codigo) {
         this.codigo = codigo;
     }
     public void setProfesor(Profesor profesor) {

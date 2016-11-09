@@ -289,7 +289,7 @@ public class FormularioMateria extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       Materia m = new Materia(jTextField1.getText(),Integer.parseInt(jTextField5.getText()),profesores.get(jComboBox1.getSelectedIndex()));
+       Materia m = new Materia(jTextField1.getText(),Long.parseLong(jTextField5.getText()),profesores.get(jComboBox1.getSelectedIndex()));
        materias.add(m);
        jComboBox2.addItem(m.getNombre());
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -311,7 +311,7 @@ public class FormularioMateria extends javax.swing.JFrame {
         Materia m = materias.get(jComboBox2.getSelectedIndex());
         jTextField7.setText(m.getNombre());
         jTextField8.setText(m.getProfesor().getName()+" "+m.getProfesor().getLastName());
-        jTextField9.setText(Integer.toString(m.getCodigo()));
+        jTextField9.setText(Long.toString(m.getCodigo()));
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed

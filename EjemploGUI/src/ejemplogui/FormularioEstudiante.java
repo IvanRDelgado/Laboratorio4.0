@@ -486,7 +486,7 @@ public class FormularioEstudiante extends javax.swing.JFrame {
         materiasVistas.add(0, materias.get(jComboBox2.getSelectedIndex()));
         materiasVistas.add(1, materias.get(jComboBox3.getSelectedIndex()));
         materiasVistas.add(2, materias.get(jComboBox4.getSelectedIndex()));
-        Estudiante E = new Estudiante(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()), Integer.parseInt(jTextField4.getText()), jTextField5.getText(), jTextField6.getText(),materiasVistas);
+        Estudiante E = new Estudiante(jTextField1.getText(), jTextField2.getText(), Long.parseLong(jTextField3.getText()), Long.parseLong(jTextField4.getText()), jTextField5.getText(), jTextField6.getText(),materiasVistas);
         estudiantes.add(E);
         jComboBox1.addItem(E.getName()+" "+E.getLastName());
         
@@ -504,10 +504,10 @@ public class FormularioEstudiante extends javax.swing.JFrame {
         // TODO add your handling code here:
         Estudiante A= estudiantes.get(jComboBox1.getSelectedIndex());
         jTextField7.setText(A.getName());
-        jTextField8.setText(Integer.toString(A.getLandLine()));
+        jTextField8.setText(Long.toString(A.getLandLine()));
         jTextField9.setText(A.getMail());
         jTextField10.setText(A.getLastName());
-        jTextField11.setText(Integer.toString(A.getMovilPhone()));
+        jTextField11.setText(Long.toString(A.getMovilPhone()));
         jTextField12.setText(A.getAddress());
         jTextField13.setText(A.getMateriasString());
         
@@ -515,6 +515,7 @@ public class FormularioEstudiante extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        
         jComboBox2.removeAllItems();
         for(Materia materia: materias) {
             jComboBox2.addItem(materia.getNombre());

@@ -12,13 +12,13 @@ package ejemplogui;
 public abstract class Persona {
     String name;
     String lastName;
-    int landLine;
-    int movilPhone;
+    long landLine;
+    long movilPhone;
     String mail;
     String address;
     
     
-    public Persona(String name, String lastName, int landLine, int movilPhone, String mail, String address) {
+    public Persona(String name, String lastName, long landLine, long movilPhone, String mail, String address) {
         this.name = name;
         this.lastName = lastName;
         this.landLine = landLine;
@@ -35,11 +35,11 @@ public abstract class Persona {
         return lastName;
     }
 
-    public int getLandLine() {
+    public long getLandLine() {
         return landLine;
     }
 
-    public int getMovilPhone() {
+    public long getMovilPhone() {
         return movilPhone;
     }
 
@@ -59,11 +59,11 @@ public abstract class Persona {
         this.lastName = lastName;
     }
 
-    public void setLandLine(int landLine) {
+    public void setLandLine(long landLine) {
         this.landLine = landLine;
     }
 
-    public void setMovilPhone(int movilPhone) {
+    public void setMovilPhone(long movilPhone) {
         this.movilPhone = movilPhone;
     }
 

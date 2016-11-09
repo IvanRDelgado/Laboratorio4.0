@@ -15,7 +15,7 @@ public class Estudiante extends Persona{
     
     ArrayList<Materia> materias;
     
-    public Estudiante(String name, String lastName, int landLine, int movilPhone, String mail, String address, ArrayList<Materia> materias) {
+    public Estudiante(String name, String lastName, long landLine, long movilPhone, String mail, String address, ArrayList<Materia> materias) {
         super(name, lastName, landLine, movilPhone, mail, address);
         this.materias= materias;
     } 

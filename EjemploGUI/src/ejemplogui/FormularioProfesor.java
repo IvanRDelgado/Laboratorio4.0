@@ -355,7 +355,7 @@ public class FormularioProfesor extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        Profesor P = new Profesor(jTextField13.getText(), jTextField14.getText(), Integer.parseInt(jTextField15.getText()),Integer.parseInt(jTextField16.getText()) , jTextField17.getText(), jTextField18.getText());
+        Profesor P = new Profesor(jTextField13.getText(), jTextField14.getText(), Long.parseLong(jTextField15.getText()),Long.parseLong(jTextField16.getText()) , jTextField17.getText(), jTextField18.getText());
         profesores.add(P);
         selProfesor.addItem(P.getName()+" "+P.getLastName());
         modificar_formulario_materia ();
@@ -403,10 +403,10 @@ public class FormularioProfesor extends javax.swing.JFrame {
         // TODO add your handling code here:
         Profesor P= profesores.get(selProfesor.getSelectedIndex());
         jTextField19.setText(P.getName());
-        jTextField20.setText(Integer.toString(P.getLandLine()));
+        jTextField20.setText(Long.toString(P.getLandLine()));
         jTextField21.setText(P.getMail());
         jTextField22.setText(P.getLastName());
-        jTextField23.setText(Integer.toString(P.getMovilPhone()));
+        jTextField23.setText(Long.toString(P.getMovilPhone()));
         jTextField24.setText(P.getAddress());
         
     }//GEN-LAST:event_selProfesorActionPerformed

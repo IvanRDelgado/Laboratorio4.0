@@ -23,7 +23,7 @@ public class Estudiante extends Persona{
     public String getMateriasString() {
         String r="";
         for (Materia materia : materias) {
-            r+=materia.getNombre()+"\n\n ";
+            r+=materia.getNombre()+"\n";
         }
         return r;
     }

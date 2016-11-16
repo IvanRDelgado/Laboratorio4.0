@@ -15,6 +15,7 @@ import ejemplogui.MasterFormlario;
 import ejemplogui.Profesor;
 import java.io.File;
 import java.io.Serializable;
+import java.util.ArrayList;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -23,75 +24,75 @@ import javax.swing.JOptionPane;
  * @author Juan
  */
 public class Save implements Serializable {
-
+    
     private MasterFormlario master;
-
+    
     public Save(MasterFormlario master) {
         this.master = master;
-
+        
     }
-
-    public void guardarObjeto() {
+    
+    public void guardarObjeto(MasterFormlario master) {
         try {
             FileOutputStream fos = new FileOutputStream("contacts.db");
             ObjectOutputStream os = new ObjectOutputStream(fos);
-            os.writeObject(master);
+            
+            os.writeObject(master.getEstudiantes());
             os.close();
-
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
+    
     public void cargarObjeto() {
-
+        
         try {
-
+            
             FileInputStream fis = new FileInputStream("contacts.db");
             ObjectInputStream is = new ObjectInputStream(fis);
-
-            master = (MasterFormlario) is.readObject();
-            master.setEstudiantes(master.getEstudiantes());
-            master.setProfesores(master.getProfesores());
-
+            master.setEstudiantes((ArrayList) is.readObject());
         } catch (Exception e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(master, e.getMessage());
         }
-
+        
     }
 
     /**
      * TXT
-     * @param master 
+     *
+     * @param master
      */
     public void guardarTexto(MasterFormlario master) {
-
+        
         try {
-            JFileChooser file = new JFileChooser();
             
+            JFileChooser file = new JFileChooser();
             file.showOpenDialog(master);
             File destiny = file.getSelectedFile();
             FileWriter fw = new FileWriter(destiny);
-
+            FileWriter y = new FileWriter("texto.txt");
+            String x = "Nombre,Apellido,Telefono_Fijo,Telefono_Movil,Correo,"
+                    + "Dirección\n";
+            if (destiny != null) {
+                fw.write(x);
+                y.write(x);
+                
+                System.out.println("escribre=='0'0");
+                for (Estudiante e : master.getEstudiantes()) {
+                    fw.write(e.getName() + "," + e.getLastName() + "," + e.getLandLine() + ","
+                            + e.getMovilPhone() + "," + e.getMail() + "," + e.getAddress() + "\n");
+                    System.out.println("lo hace o no lo hace");
+                }
+                
+                JOptionPane.showMessageDialog(master, "Succes!");
+            }
             // Información Estudiantes
-            fw.write("Nombre,Apellido,Telefono_Fijo,Telefono_Movil,Correo,"
-                    + "Dirección\n");
-
-            for (Estudiante e : master.getEstudiantes()) {
-                fw.write(e.getName() + "," + e.getLastName() + "," + e.getLandLine() + ","
-                        + e.getMovilPhone() + "," + e.getMail() + "," + e.getAddress() + "\n");
-            }
-
-            // Información Profesores
-            for (Profesor e : master.getProfesores()) {
-                fw.write(e.getName() + "," + e.getLastName() + "," + e.getLandLine() + ","
-                        + e.getMovilPhone() + "," + e.getMail() + "," + e.getAddress() + "\n");
-            }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        
     }
-
+    
 }

@@ -16,57 +16,57 @@ import java.io.Serializable;
  *
  * @author Estudiante
  */
-public class MasterFormlario extends javax.swing.JFrame implements Serializable {
+public class MasterFormlario extends javax.swing.JFrame {
 
     /**
      * Creates new form MasterFormlario
      */
-    private FormularioEstudiante estudiante;
-    private FormularioMateria materia;
-    private FormularioProfesor profesor;
+    private transient FormularioEstudiante estudiante;
+    private transient FormularioMateria materia;
+    private transient FormularioProfesor profesor;
     ArrayList<Estudiante> estudiantes;
     ArrayList<Materia> materias;
     ArrayList<Profesor> profesores;
-    private Save save;
-    
+    private transient Save save;
+
     public MasterFormlario() {
         super("MASTER OF PUPPETS");
         save = new Save(this);
-        
+
         estudiantes = new ArrayList<>();
         profesores = new ArrayList<>();
         materias = new ArrayList<>();
-        
+
         save.cargarObjeto();
-        
+
         estudiante = new FormularioEstudiante(this, profesores, estudiantes, materias);
         profesor = new FormularioProfesor(this, profesores, estudiantes, materias);
         materia = new FormularioMateria(this, profesores, estudiantes, materias);
-        
+
         initComponents();
-        
+
     }
-    
+
     public ArrayList<Estudiante> getEstudiantes() {
         return estudiantes;
     }
-    
+
     public void setEstudiantes(ArrayList<Estudiante> estudiantes) {
         this.estudiantes = estudiantes;
     }
-    
+
     public ArrayList<Materia> getMaterias() {
         return materias;
     }
-    
+
     public void setMaterias(ArrayList<Materia> materias) {
         this.materias = materias;
     }
-    
+
     public ArrayList<Profesor> getProfesores() {
         return profesores;
     }
-    
+
     public void setProfesores(ArrayList<Profesor> profesores) {
         this.profesores = profesores;
     }
@@ -132,7 +132,8 @@ public class MasterFormlario extends javax.swing.JFrame implements Serializable 
             }
         });
 
-         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+		 layout = new javax.swing.GroupLayout(getContentPane());
+         
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,7 +179,7 @@ public class MasterFormlario extends javax.swing.JFrame implements Serializable 
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         setVisible(false);
         estudiante.setVisible(true);
         materias.add(new Materia(" ", 0l, new Profesor(" ", " ", 0, 0, " ", " ")));
@@ -204,8 +205,8 @@ public class MasterFormlario extends javax.swing.JFrame implements Serializable 
      */
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        
-        save.guardarObjeto();
+
+        save.guardarObjeto(this);
         System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -230,9 +231,9 @@ public class MasterFormlario extends javax.swing.JFrame implements Serializable 
             System.out.println(e);
         }
         JFrame a = new MasterFormlario();
-        
+
         a.setVisible(true);
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -243,5 +244,6 @@ public class MasterFormlario extends javax.swing.JFrame implements Serializable 
     private transient javax.swing.JButton jButton5;
     private transient javax.swing.JScrollPane jScrollPane1;
     private transient javax.swing.JTextArea jTextArea1;
+	private transient javax.swing.GroupLayout layout; 
     // End of variables declaration//GEN-END:variables
 }

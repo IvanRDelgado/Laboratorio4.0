@@ -5,11 +5,13 @@
  */
 package ejemplogui;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Estudiante
  */
-public class Profesor extends Persona{
+public class Profesor extends Persona implements Serializable {
 
     public Profesor(String name, String lastName, long landLine, long movilPhone, String mail, String address) {
         super(name, lastName, landLine, movilPhone, mail, address);

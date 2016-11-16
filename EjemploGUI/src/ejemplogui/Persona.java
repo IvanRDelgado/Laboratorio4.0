@@ -5,19 +5,21 @@
  */
 package ejemplogui;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Ivan Delgado
  */
-public abstract class Persona {
+public abstract class Persona implements Serializable {
+
     String name;
     String lastName;
     long landLine;
     long movilPhone;
     String mail;
     String address;
-    
-    
+
     public Persona(String name, String lastName, long landLine, long movilPhone, String mail, String address) {
         this.name = name;
         this.lastName = lastName;
@@ -74,5 +76,5 @@ public abstract class Persona {
     public void setAddress(String address) {
         this.address = address;
     }
-    
+
 }

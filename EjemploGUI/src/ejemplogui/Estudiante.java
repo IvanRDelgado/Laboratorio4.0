@@ -5,13 +5,14 @@
  */
 package ejemplogui;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Ivan Delgado
  */
-public class Estudiante extends Persona{
+public class Estudiante extends Persona implements Serializable {
     
     ArrayList<Materia> materias;
     

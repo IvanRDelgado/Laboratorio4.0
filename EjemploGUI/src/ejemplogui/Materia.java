@@ -5,11 +5,13 @@
  */
 package ejemplogui;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Ivan Delgado
  */
-public class Materia {
+public class Materia implements Serializable  {
     String nombre;
     long codigo;
     Profesor profesor;
